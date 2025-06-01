@@ -1,0 +1,33 @@
+.totalPrice{
+    height:180px;
+    width:250px;
+    /* border:2px solid black; */
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10%;
+    margin-top:10%;
+    background-color:rgb(241, 241, 241);
+    border-radius:10px;
+    /* align-items:center; */
+}
+.purchaseButton{
+    height:30px;
+    width:110px;
+    font-size:20px;
+    background-color:rgb(112, 100, 229);
+    color:rgb(255, 255, 255);
+    border:none;
+    border-radius:6px;
+    transition:all 0.3s ease-in-out;
+}
+.purchaseButton:hover{
+    background-color:rgb(255, 255, 255);
+    color:rgb(112, 100, 229);
+    border:1px solid rgb(112, 100, 229);
+}
+.itemsPrice{
+    color:rgb(34, 73, 87);
+    font-size:22px;
+}

@@ -1,0 +1,52 @@
+.myOrders{
+    height:auto;
+    width:600px;
+    /* border:2px solid black; */
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.tableData{
+    text-align:center;
+}
+.tableHeader{
+    width:280px;
+    /* border:none; */
+}
+.ordersTable{
+    border:none;
+    width:90%;
+    border-collapse:collapse;
+}
+.tableRow{
+    margin-top:2px;
+    background-color:rgb(247, 247, 247);
+}
+.tableHeaders{
+    width:100px;
+    /* text-decoration:underline; */
+}
+.orderedOn{
+    color:#224957;
+}
+.loading{
+    height: 135px;
+    width: 222px;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    /* left: 30%; */
+    top:-18%;
+}
+.loadingName{
+    font-size:20px;
+    margin-left:10px;
+    font-weight:600;
+    color:blue;
+}

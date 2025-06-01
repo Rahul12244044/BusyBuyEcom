@@ -1,0 +1,114 @@
+.oneItem{
+    height:450px;
+    width:262px;
+    /* border:2px solid black; */
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    /* margin:auto; */
+    margin:5px 8px;
+    box-shadow:0 2px 8px 0 rgba(64, 77, 148, .4);
+    position:relative;
+}
+.itemImage{
+    height:65%;
+    width:90%;
+    /* border:2px solid black; */
+    box-sizing:border-box;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.image{
+    height:80%;
+    width:80%;
+}
+.itemInfo{
+    height:40%;
+    width:95%;
+    /* border:2px solid black; */
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:baseline;
+    gap:10px;
+}
+.itemName{
+    /* display:flex;
+    flex-direction:row;
+    justify-content:center; */
+    /* border:2px solid black; */
+    font-size: 17px;
+    color: #3a3636;
+    font-weight: 600;
+    min-height:55px;
+    max-width:90%;
+}
+.itemPrice{
+    /* display:flex;
+    justify-content:start; */
+    /* border:2px solid black; */
+    height:30px;
+    font-weight:bold;
+    font-size:22px;
+    color:#224957;
+}
+.addButton{
+    height:23%;
+    width:82%;
+    margin:4px 20px;
+    font-size:20px;
+    background-color:#7064e5;
+    color:#fff;
+    border-radius:6px;
+    border:none;
+    transition:all 0.3s ease-in-out;
+}
+.addButton:hover{
+    color:#7064e5;
+    background-color:#fff;
+    border:1px solid #7064e5;
+}
+.loading{
+    height: 135px;
+    width: 222px;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    position:absolute;
+    left:40%;
+    top:40%;
+}
+.loadingName{
+    font-size:20px;
+    margin-left:10px;
+    font-weight:600;
+    color:blue;
+}
+.backImage{
+    height:20px;
+    width:20px;
+    font-weight:600;
+    font-size:20px;
+}
+.likeToggle{
+    position: absolute;
+    right: 5%;
+    top: 1%;
+    height: 24px;
+    width: 25px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    /* color: red; Red heart */
+    /* filter: none; No outline */
+    /* transition: color 0.3s ease-in-out, filter 0.3s ease-in-out; */
+    cursor:pointer;
+}

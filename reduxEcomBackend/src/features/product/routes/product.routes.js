@@ -1,0 +1,10 @@
+import express from "express";
+import ProductController from "../controllers/product.controller.js";
+import uploads from "../../../middleware/fileUpload.middleware.js";
+const productController=new ProductController();
+const productRouter=express.Router();
+productRouter.get("/",productController.getAllProducts);
+productRouter.post("/add",uploads.array("image",10),productController.addProduct);
+productRouter.get("/filter",productController.filterProduct);
+productRouter.get("/oneProduct",productController.getOneProduct);
+export default productRouter;
