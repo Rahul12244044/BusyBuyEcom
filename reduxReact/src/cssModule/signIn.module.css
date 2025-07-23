@@ -1,50 +1,81 @@
-.signIn{
-    height:350px;
-    width:290px;
-    /* border:2px solid black; */
-    display:flex;
-    flex-direction:column;
-    position: absolute;
-    left: 30%;
-    top:15%;
+.signInWrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
 }
-.signInForm{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+
+.signInForm {
+  width: 100%;
+  max-width: 320px;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.input{
-    height:40px;
-    width:80%;
-    border-radius:10px;
-    background-color:#f4f6f8;
-    border:2px solid #7064e5;
-    padding:0px 10px;
-    font-size:17px;
-    /* outline:1px solid #7064e5 ; */
-    color:#7064e5;
+
+.signInHeading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #224957;
+  text-align: center;
+  margin-bottom: 10px;
 }
-.input:focus{
-    border:2px solid #7064e5;
-    outline:none;
+
+.input {
+  height: 40px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #f4f6f8;
+  border: 2px solid #7064e5;
+  padding: 0 10px;
+  font-size: 17px;
+  color: #7064e5;
 }
-.signInButton{
-    height:40px;
-    width:84%;
-    border-radius:6px;
-    font-size:22px;
-    background-color:#7064e5;
-    color:white;
-    box-shadow:0 4px 4px rgba(0,0,0,.3);
-    border:none;
-    cursor:pointer;
+
+.input:focus {
+  outline: none;
+  border: 2px solid #7064e5;
 }
-.signInAndSignUp{
-    color:#224957;
-    font-size:40px;
-    /* font-weight:600; */
+
+.signInButton {
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 20px;
+  background-color: #7064e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
-.signInAndSignUps{
-    color:#224957;
-    font-weight:600;
+
+.signInButton:hover {
+  background-color: white;
+  color: #7064e5;
+  border: 1px solid #7064e5;
+}
+
+.signInSwitch {
+  text-align: center;
+  color: #224957;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 500px) {
+  .signInForm {
+    padding: 25px 20px;
+    max-width: 90%;
+  }
+
+  .signInHeading {
+    font-size: 26px;
+  }
 }

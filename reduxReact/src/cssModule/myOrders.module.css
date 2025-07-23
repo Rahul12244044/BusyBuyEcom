@@ -1,52 +1,116 @@
-.myOrders{
-    height:auto;
-    width:600px;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+/* Wraps all orders, centers content */
+.ordersWrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
 }
-.tableData{
-    text-align:center;
+
+/* Title */
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #224957;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.tableHeader{
-    width:280px;
-    /* border:none; */
+
+.noOrders {
+  font-size: 24px;
+  color: #777;
 }
-.ordersTable{
-    border:none;
-    width:90%;
-    border-collapse:collapse;
+
+/* Each order container */
+.myOrders {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
-.tableRow{
-    margin-top:2px;
-    background-color:rgb(247, 247, 247);
+
+/* Order date */
+.orderedOn {
+  color: #224957;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-.tableHeaders{
-    width:100px;
-    /* text-decoration:underline; */
+
+/* Responsive table container */
+.tableWrapper {
+  overflow-x: auto;
 }
-.orderedOn{
-    color:#224957;
+
+/* Table styling */
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
 }
-.loading{
-    height: 135px;
-    width: 222px;
-    /* border: 2px solid black; */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    position: relative;
-    /* left: 30%; */
-    top:-18%;
+
+.tableHeader {
+  width: 40%;
+  font-weight: bold;
 }
-.loadingName{
-    font-size:20px;
-    margin-left:10px;
-    font-weight:600;
-    color:blue;
+
+.tableHeaders {
+  width: 20%;
+  font-weight: bold;
+}
+
+.tableRow {
+  background-color: #f7f7f7;
+}
+
+.tableData {
+  padding: 10px;
+}
+
+/* Loader */
+.loading {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingName {
+  font-size: 20px;
+  font-weight: 600;
+  color: blue;
+  margin-top: 10px;
+}
+
+/* 📱 Responsive styles */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .myOrders {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .tableHeader,
+  .tableHeaders {
+    font-size: 14px;
+  }
+
+  .orderedOn {
+    font-size: 14px;
+  }
+
+  .tableData {
+    font-size: 14px;
+    padding: 8px;
+  }
 }

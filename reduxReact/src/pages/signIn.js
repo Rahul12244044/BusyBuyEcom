@@ -1,56 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 import signInCssModule from "../cssModule/signIn.module.css";
-import {Link,useNavigate} from "react-router-dom";
-import {useState} from "react";
-import {useDispatch} from "react-redux";
-import {useItem} from "../context/itemContext.js";
-// import {useItem} from "../context/itemContext.js";
-import {signInAsync} from "../redux/reducers/userReducer.js";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-const SignIn=()=>{
-    // const {handleSignInSubmit}=useItem();
-    const [email,setEmail]=useState(undefined);
-    const [password,setPassword]=useState(undefined);
-    const navigate=useNavigate();
-    const dispatch=useDispatch();
-    const {setNameUser,setTypeCustomer,setLoggedIn,setUserId,loggedIn}=useItem();
-    const [signIn,setSignIn]=useState(true);
-    const handleSignIn=(event)=>{
-        event.preventDefault();
-        console.log("handleSignIn");
-        const userLogin={email,password};
-        setSignIn(false);
-        dispatch(signInAsync({payload:userLogin,setNameUser,setTypeCustomer,setLoggedIn,setUserId})).unwrap().then((user)=>{
-            if(user){
-                console.log("signIn$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-                console.log(loggedIn);
-                console.log(user);
-            navigate("/");
-            }else{
-                toast.error("Please enter valid email and password!");
-            }
-            setTimeout(()=>{
-                setSignIn(true);
-            },2000)
-            // }else{
-            //     toast.error("Please enter valid email and password!");
-            //     // setEmail("");
-            //     // setPassword("");
-            // }
-        });
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { signInAsync } from "../redux/reducers/userReducer.js";
+import { useItem } from "../context/itemContext.js";
+import { toast } from "react-toastify";
+
+const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signIn, setSignIn] = useState(true);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const {
+    setNameUser,
+    setTypeCustomer,
+    setLoggedIn,
+    setUserId
+  } = useItem();
+
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+    setSignIn(false);
+
+    const userLogin = { email, password };
+
+    try {
+      const user = await dispatch(
+        signInAsync({
+          payload: userLogin,
+          setNameUser,
+          setTypeCustomer,
+          setLoggedIn,
+          setUserId
+        })
+      ).unwrap();
+
+      if (user && user.userId) {
+        // ✅ Extract required fields and save in sessionStorage
+        const userObj = {
+          userId: user.userId,
+          nameUser: user.nameUser,
+          typeCustomer: user.typeCustomer
+        };
+
+        sessionStorage.setItem("user", JSON.stringify(userObj));
+        navigate("/");
+      } else {
+        toast.error("Invalid email or password");
+      }
+    } catch (err) {
+      toast.error("Login failed. Please try again.");
+    } finally {
+      setTimeout(() => setSignIn(true), 2000);
     }
-    return (
-    <>
-    <div className={signInCssModule.signIn}>
-        <h2 className={signInCssModule.signInAndSignUp}>SignIn</h2>
-        <form onSubmit={handleSignIn} className={signInCssModule.signInForm}>
-            <input onChange={(event)=>{setEmail(event.target.value)}} className={signInCssModule.input} value={email} name="email" type="text" placeholder="Enter Email" required/>
-            <input onChange={(event)=>setPassword(event.target.value)} className={signInCssModule.input} value={password} name="password" type="password" placeholder="Enter Password" required/>
-            <button className={signInCssModule.signInButton}>{signIn?"Sign In":"..."}</button>
-        </form>
-        <Link to="/signup"><p className={signInCssModule.signInAndSignUps}>Or Sign Up instead</p></Link>
+  };
+
+  return (
+    <div className={signInCssModule.signInWrapper}>
+      <form onSubmit={handleSignIn} className={signInCssModule.signInForm}>
+        <h2 className={signInCssModule.signInHeading}>Sign In</h2>
+
+        <input
+          onChange={(e) => setEmail(e.target.value)}
+          className={signInCssModule.input}
+          value={email}
+          name="email"
+          type="email"
+          placeholder="Enter Email"
+          required
+        />
+
+        <input
+          onChange={(e) => setPassword(e.target.value)}
+          className={signInCssModule.input}
+          value={password}
+          name="password"
+          type="password"
+          placeholder="Enter Password"
+          required
+        />
+
+        <button type="submit" className={signInCssModule.signInButton}>
+          {signIn ? "Sign In" : "..."}
+        </button>
+
+        <Link to="/signUp" className={signInCssModule.signInSwitch}>
+          Or Sign Up instead
+        </Link>
+      </form>
     </div>
-    </>)
-}
+  );
+};
+
 export default SignIn;

@@ -59,36 +59,34 @@
     justify-content:center;
     align-items:center;
 }
-.itemsAndRange{
-    min-height:900px;
-    width:100%;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    display:flex;
+.itemsAndRange {
+  display: flex;
+  flex-direction: row;         /* Default: side by side */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;             /* Allow wrapping on smaller screens */
 }
-.priceRange{
-    height:360px;
-    width:255px;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    position:fixed;
-    top:30%;
+
+.priceRange {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.items{
-    /* min-height:200px; */
-    /* max-height:800px;
-    overflow-y:auto; */
-    min-height:400px;
-    width:80%;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    position:absolute;
-    left:19%;
-    display:flex;
-    justify-content:flex-start;
-    flex-wrap:wrap;
-    padding-top:13px;
+
+.items {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
 }
+
+
 .items2{
     height:auto;
     width:100%;
@@ -165,3 +163,132 @@
 .homeSign:hover{
     color:#224957;
 }
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .buyBusy {
+    width: 100%;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .welcomeName {
+    min-width: unset;
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .homeAndSignIn {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .home, .signIn {
+    min-width: 140px;
+    justify-content: center;
+  }
+
+  .homeSign {
+    font-size: 18px;
+  }
+
+  .cartLength {
+    top: -5px;
+    left: 70%;
+    font-size: 16px;
+    height: 18px;
+    width: 18px;
+  }
+
+  .image {
+    display: none;
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .homeAndSignIn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home, .signIn {
+    width: 100%;
+    min-width: unset;
+    margin: 5px 0;
+  }
+
+  .homeSign {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .searchItems {
+    width: 90%;
+  }
+
+  .searchByName {
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .itemsAndRange {
+    flex-direction: column;
+  }
+
+  .priceRange {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .items {
+    position: static;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+}
+.itemsAndRange {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  gap: 20px;
+}
+
+/* Optional: more compact when in narrow view */
+@media (max-width: 768px) {
+  .itemsAndRange {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .priceRange {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .items {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

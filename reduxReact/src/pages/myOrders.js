@@ -131,60 +131,64 @@ const MyOrders=()=>{
         );
     }
     return (
-    <> 
-    
-        <>
-        {sortedOneUserAllOrders.length===0?<h1>No Orders Found!</h1>:<h2>Your Orders</h2>}
-        {/* {allOrdersOfUsers.map((elms)=>{
-            let totalPrice=0; */}
-            {sortedOneUserAllOrders.map((elem)=>{
-                return (
-                <>
-                <div className={myOrdersCssModule.myOrders}>
-        <h3 className={myOrdersCssModule.orderedOn}>Ordered On:- {new Date().toISOString().substring(0,10)}</h3>
-        <table className={myOrdersCssModule.ordersTable} border="1" cellPadding="10" cellSpacing="1">
-            <thead>
-                <tr>
+  <>
+    {loading ? (
+      <div className={myOrdersCssModule.loading}>
+        <ClipLoader size={40} color="blue" />
+        <p className={myOrdersCssModule.loadingName}>Loading...</p>
+      </div>
+    ) : (
+      <div className={myOrdersCssModule.ordersWrapper}>
+        {sortedOneUserAllOrders.length === 0 ? (
+          <h1 className={myOrdersCssModule.noOrders}>No Orders Found!</h1>
+        ) : (
+          <h2 className={myOrdersCssModule.heading}>Your Orders</h2>
+        )}
+
+        {sortedOneUserAllOrders.map((elem, index) => (
+          <div className={myOrdersCssModule.myOrders} key={index}>
+            <h3 className={myOrdersCssModule.orderedOn}>
+              Ordered On: {elem.orderOn.toISOString().substring(0, 10)}
+            </h3>
+
+            <div className={myOrdersCssModule.tableWrapper}>
+              <table className={myOrdersCssModule.ordersTable}>
+                <thead>
+                  <tr>
                     <th className={myOrdersCssModule.tableHeader}>Title</th>
                     <th className={myOrdersCssModule.tableHeaders}>Price</th>
                     <th className={myOrdersCssModule.tableHeaders}>Quantity</th>
-                    <th className={myOrdersCssModule.tableHeaders}>Total Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                {elem.orderItems.map((order)=>{
-                    return (
-                    <>
-                    <tr className={myOrdersCssModule.tableRow}>
-                    <td className={myOrdersCssModule.tableData}>{order.elm.name}</td>
-                    <td className={myOrdersCssModule.tableData}>&#8377;&nbsp;{order.elm.price}</td>
-                    <td className={myOrdersCssModule.tableData}>{order.quantity}</td>
-                    <td className={myOrdersCssModule.tableData}>&#8377;&nbsp;{order.quantity*order.elm.price}</td>
-                </tr>
-                    </>)
-                })}
-                    
+                    <th className={myOrdersCssModule.tableHeaders}>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {elem.orderItems.map((order, i) => (
+                    <tr key={i} className={myOrdersCssModule.tableRow}>
+                      <td className={myOrdersCssModule.tableData}>{order.elm.name}</td>
+                      <td className={myOrdersCssModule.tableData}>
+                        ₹ {order.elm.price}
+                      </td>
+                      <td className={myOrdersCssModule.tableData}>{order.quantity}</td>
+                      <td className={myOrdersCssModule.tableData}>
+                        ₹ {order.quantity * order.elm.price}
+                      </td>
+                    </tr>
+                  ))}
+                  <tr className={myOrdersCssModule.tableRow}>
+                    <td></td><td></td><td></td>
+                    <td className={myOrdersCssModule.tableData}>
+                      ₹ {elem.totalPrice}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </>
+);
 
-                    
-                
-                
-                <tr className={myOrdersCssModule.tableRow}>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td className={myOrdersCssModule.tableData}>&#8377;&nbsp;{elem.totalPrice}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-                </>)
-            })}
-            <>
-             
-            </>
-        
-       
-        </>
-    </>)
 }
 export default MyOrders;

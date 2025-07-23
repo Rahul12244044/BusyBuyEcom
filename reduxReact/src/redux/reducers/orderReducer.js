@@ -2,27 +2,26 @@ import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
 const initialState={
     orders:[]
 }
-export const orderPlaceAsync=createAsyncThunk("post/orderPlaced",async (payload,thunkApi)=>{
-    const {userId,totalPrice,orderItems}=payload;
+export const orderPlaceAsync = createAsyncThunk(
+  "post/orderPlaced",
+  async (payload) => {
+    const { userId, totalPrice, orderItems } = payload;
     console.log("orderPlacesAsync.........");
-    console.log(userId);
-    const response=await fetch("http://localhost:3200/api/order",{
-        method:"POST",
-        headers:{
-            "content-type":"application/json"
-        },
-        body:JSON.stringify({
-            userId,
-            totalPrice,
-            orderItems
-        })
-    })
-    console.log(response);
-    console.log("orderPlacedAsync");
-    const responseJson=await response.json();
-    console.log(responseJson);
-    thunkApi.dispatch(orderAction.orderPlaced(responseJson))
-});
+
+    const response = await fetch("http://localhost:3200/api/order", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({ userId, totalPrice, orderItems })
+    });
+
+    const responseJson = await response.json();
+    console.log("orderPlacedAsync", responseJson);
+    return responseJson;
+  }
+);
+
 export const oneUserOrderAsync=createAsyncThunk("get/oneUserOrder",async (payload,thunkApi)=>{
     const query=new URLSearchParams({
         userId:payload
@@ -36,20 +35,19 @@ export const oneUserOrderAsync=createAsyncThunk("get/oneUserOrder",async (payloa
     // return oneUserOrder;
     thunkApi.dispatch(orderAction.getInitailState(oneUserOrder));
 })
-const orderSlice=createSlice({
-    name:"orderSlice",
-    initialState,
-    reducers:{
-        getInitailState:(state,action)=>{
-            console.log("ordersInitialState");
-            console.log(action.payload);
-            state.orders=[...action.payload];
-        },
-        orderPlaced:(state,action)=>{
-        state.orders.push(action.payload);
-        }
-      
-    }
+const orderSlice = createSlice({
+  name: "orderSlice",
+  initialState,
+  reducers: {
+    getInitailState: (state, action) => {
+      state.orders = [...action.payload];
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(orderPlaceAsync.fulfilled, (state, action) => {
+      state.orders.push(action.payload);
+    });
+  }
 });
 export const orderReducer=orderSlice.reducer;
 export const orderAction=orderSlice.actions;

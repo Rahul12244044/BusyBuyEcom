@@ -70,20 +70,20 @@
     background-color:#fff;
     border:1px solid #7064e5;
 }
-.loading{
-    height: 135px;
-    width: 222px;
-    /* border: 2px solid black; */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* margin: auto; */
-    position:absolute;
-    left:40%;
-    top:40%;
+.loading {
+  height: 135px;
+  width: 222px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .loadingName{
     font-size:20px;
     margin-left:10px;
@@ -111,4 +111,100 @@
     /* filter: none; No outline */
     /* transition: color 0.3s ease-in-out, filter 0.3s ease-in-out; */
     cursor:pointer;
+}
+/* ✅ RESPONSIVE STYLING */
+
+@media (max-width: 1024px) {
+  .oneItem {
+    width: 45%;
+    margin: 8px auto;
+  }
+
+  .image {
+    height: 70%;
+    width: 70%;
+  }
+
+  .addButton {
+    font-size: 18px;
+  }
+
+  .itemName {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .oneItem {
+    width: 80%;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .image {
+    width: 65%;
+    height: auto;
+  }
+
+  .itemInfo {
+    gap: 6px;
+  }
+
+  .itemPrice {
+    font-size: 20px;
+  }
+
+  .addButton {
+    height: 40px;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .likeToggle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .oneItem {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itemImage {
+    width: 100%;
+  }
+
+  .image {
+    width: 90%;
+    height: auto;
+  }
+
+  .itemInfo {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .itemName {
+    font-size: 15px;
+  }
+
+  .itemPrice {
+    font-size: 18px;
+  }
+
+  .addButton {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .likeToggle {
+    right: 10px;
+    top: 10px;
+  }
 }
