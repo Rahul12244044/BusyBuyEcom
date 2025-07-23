@@ -1,4 +1,5 @@
 import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
+import {BASE_URL} from "../utils/api.js";
 const initialState={
     orders:[]
 }
@@ -8,7 +9,7 @@ export const orderPlaceAsync = createAsyncThunk(
     const { userId, totalPrice, orderItems } = payload;
     console.log("orderPlacesAsync.........");
 
-    const response = await fetch("http://localhost:3200/api/order", {
+    const response = await fetch(`${BASE_URL}/api/order`, {
       method: "POST",
       headers: {
         "content-type": "application/json"
@@ -26,7 +27,7 @@ export const oneUserOrderAsync=createAsyncThunk("get/oneUserOrder",async (payloa
     const query=new URLSearchParams({
         userId:payload
     })
-    const response=await fetch(`http://localhost:3200/api/order/getUserOrder?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/order/getUserOrder?${query}`,{
         method:"GET"
     });
     const oneUserOrder=await response.json();

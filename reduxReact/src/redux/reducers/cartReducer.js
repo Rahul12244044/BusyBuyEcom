@@ -1,4 +1,5 @@
 import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
+import {BASE_URL} from "../utils/api.js";
 const initialState={
     //1)userId
     //2)productId,
@@ -23,7 +24,7 @@ export const addToCartAsync=createAsyncThunk("post/addToCart",async (payload,thu
         userId:userId,
         elm:JSON.stringify(elm)
     })
-    const response=await fetch(`http://localhost:3200/api/cart/addToCart?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/cart/addToCart?${query}`,{
         method:"POST"
     });
     const responseJson=await response.json();
@@ -41,7 +42,7 @@ export const cartDeleteAsync=createAsyncThunk("delete/deleteCartItem",async (pay
         productId:payload.productId,
         userId:payload.userId
     })
-    const response=await fetch(`http://localhost:3200/api/cart/delete?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/cart/delete?${query}`,{
         method:'DELETE'
     });
     const responseJson=await response.json();
@@ -60,7 +61,7 @@ export const quantityAsync=createAsyncThunk("put/quantityUpOrDown",async (payloa
         productId:payload.productId,
         userId:payload.userId
     })
-    const response=await fetch(`http://localhost:3200/api/cart/quantity?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/cart/quantity?${query}`,{
         method:"PUT"
     });
     console.log("QuantityUpAsync");
@@ -80,7 +81,7 @@ export const allCartItemsUserAsync=createAsyncThunk("get/allItemsUser",async (pa
     const query=new URLSearchParams({
         userId:payload.userId
     })
-    const response=await fetch(`http://localhost:3200/api/cart/getAll?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/cart/getAll?${query}`,{
         method:"GET"
     });
     const responseJson=await response.json();
@@ -99,7 +100,7 @@ export const quantityUpAsync=createAsyncThunk("put/quantityUp",async (payload,th
         userId:payload.userId,
         productId:payload.productId
     })
-    const response=await fetch(`http://localhost:3200/api/cart/quantityUp?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/cart/quantityUp?${query}`,{
         method:'PUT'
     });
     console.log(response);
@@ -112,7 +113,7 @@ export const deleteAllCartItemAsync=createAsyncThunk("delete/deleteUserCartItems
     const query=new URLSearchParams({
         userId:payload
     });
-    const response=await fetch(`http://localhost:3200/api/cart/deleteCartItem?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/cart/deleteCartItem?${query}`,{
         method:"DELETE"
     });
     const responseJson=await response.json();

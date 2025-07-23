@@ -1,4 +1,5 @@
 import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
+import {BASE_URL} from "../utils/api.js";
 import {useSelector} from "react-redux";
 const initialState={
     allProducts:[
@@ -6,7 +7,7 @@ const initialState={
     ]
 }
 export const getInitialStateAsync=createAsyncThunk("get/allProducts",async (_,thunkApi)=>{
-    await fetch("http://localhost:3200/api/products/")
+    await fetch(`${BASE_URL}/api/products/`)
     .then((res)=>{
         console.log("response of the api");
         return res.json();
@@ -17,7 +18,7 @@ export const getInitialStateAsync=createAsyncThunk("get/allProducts",async (_,th
     })
 })
 export const addProductAsync=createAsyncThunk("post/addProduct",async (payload,thunkApi)=>{
-    const response=await fetch("http://localhost:3200/api/products/add",{
+    const response=await fetch(`${BASE_URL}/api/products/add`,{
         method:"POST",
         headers:{
             "content-type":"application/json"
@@ -46,7 +47,7 @@ export const searchByPriceAndCategory=createAsyncThunk("get/searchProduct",async
         price:payload.price,
         category:payload.categories?.join(",")
     }).toString();
-    const response=await fetch(`http://localhost:3200/api/products/filter?${query}`,{
+    const response=await fetch(`${BASE_URL}/api/products/filter?${query}`,{
         method:"GET",
         headers:{
             "content-type":"application/json"
@@ -63,7 +64,7 @@ export const searchProductByName=createAsyncThunk("get/searchByName",async (payl
     const query=new URLSearchParams({
         productName:payload
     })
-    const response=await fetch(`http://localhost:3200/api/products/oneProduct?${query}`);
+    const response=await fetch(`${BASE_URL}/api/products/oneProduct?${query}`);
     const responseJson=await response.json();
     console.log("responseJson");
     console.log(responseJson);

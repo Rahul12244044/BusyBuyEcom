@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+import {BASE_URL} from "../utils/api.js";
 const initialState = {
   users: [],
 };
@@ -11,7 +11,7 @@ export const signUpAsync = createAsyncThunk(
     thunkApi
   ) => {
     try {
-      const response = await fetch("http://localhost:3200/api/user/signUp", {
+      const response = await fetch(`${BASE_URL}/api/user/signUp`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -57,7 +57,7 @@ export const signInAsync = createAsyncThunk(
   "post/signIn",
   async ({ payload, setNameUser, setTypeCustomer, setLoggedIn, setUserId }, thunkApi) => {
     try {
-      const response = await fetch("http://localhost:3200/api/user/signIn", {
+      const response = await fetch(`${BASE_URL}/api/user/signIn`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -106,7 +106,7 @@ export const logoutAsyncUser = createAsyncThunk(
       }
 
       const query = new URLSearchParams({ userId: payload });
-      const response = await fetch(`http://localhost:3200/api/user/logout?${query}`);
+      const response = await fetch(`${BASE_URL}/api/user/logout?${query}`);
 
       const responseJson = await response.json();
 
