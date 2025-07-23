@@ -1,4 +1,0 @@
-[build]
-  base = "reduxReact"
-  publish = "reduxReact/build"
-  command = "npm install --legacy-peer-deps && npm run build"
