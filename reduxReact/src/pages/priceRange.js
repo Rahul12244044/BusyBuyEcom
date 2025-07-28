@@ -10,6 +10,12 @@ const PriceRange=()=>{
     const [selectCategories,setSelectedCategories]=useState([]);
     const [searchObj,setSearchObj]=useState({price:undefined,categories:undefined});
     const dispatch=useDispatch();
+    useEffect(() => {
+    dispatch(searchByPriceAndCategory({
+        price,
+        categories: []
+    }));
+    }, []);
     const handleCheck=(event)=>{
         console.log("handleCheck");
         console.log("setCategories");
@@ -55,7 +61,7 @@ const PriceRange=()=>{
         <h2 className={priceCssModule.filterAndCategory}>Filter</h2>
         <form  className={priceCssModule.priceForm}>
             <label className={priceCssModule.price}>price:{price}</label>
-            <input onChange={(event)=>setPrice(event.target.value)} className={priceCssModule.takePrice} type="range" name="range" min="500" max="200000" step="50" value={price}/>
+            <input onChange={(event)=>setPrice(event.target.value)} className={priceCssModule.takePrice} type="range" name="range" min="3000" max="200000" step="50" value={price}/>
             <h2 className={priceCssModule.filterAndCategory}>Category</h2>
             <div className={priceCssModule.filterItems}>
                 <div>

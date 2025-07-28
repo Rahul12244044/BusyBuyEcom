@@ -102,19 +102,31 @@ const Cart = () => {
             ))}
           </div>
           <div className={cartCssModule.totalPriceSection}>
-            <TotalPrice /> {/* ✅ Total Price Below All Items */}
+            <TotalPrice /> 
           </div>
         </div>
       ) : (
-        <>
-          <div className={cartCssModule.emptyCartShow}>
-            <img className={cartCssModule.cartImage} src="https://cdn.dribbble.com/users/2058104/screenshots/4198771/media/6a0fa7f46ba72d002786d0579f8de1d0.jpg" />
-          </div>
-         <NavLink to="/" className={cartCssModule.emptyCartButton}>
-           Return To Shop
-          </NavLink>
+       <>
+  <div className={cartCssModule.emptyCartContainer}>
+    <img
+      className={cartCssModule.emptyCartImage}
+      src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
+      alt="Empty Cart"
+    />
+    <h2 className={cartCssModule.emptyCartTitle}>Your cart is empty</h2>
+    <p className={cartCssModule.emptyCartSubtitle}>
+      Looks like you haven’t added anything to your cart yet.
+    </p>
+   <div className={cartCssModule.emptyCartButtonWrapper}>
+  <NavLink to="/" className={cartCssModule.emptyCartButton}>
+    Start Shopping
+  </NavLink>
+</div>
 
-        </>
+
+  </div>
+</>
+
       )}
     </>
   );

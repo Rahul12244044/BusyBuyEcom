@@ -208,3 +208,25 @@
     top: 10px;
   }
 }
+.noProducts {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+  margin-top: 40px;
+}
+.noProductsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* or 100vh depending on full-screen requirement */
+    text-align: center;
+    width:100%;
+}
+
+.noProductsText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+
