@@ -1,4 +1,4 @@
-/* Wraps all orders, centers content */
+
 .ordersWrapper {
   width: 100%;
   min-height: 100vh;
@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #f9f9f9;
+  /* border:2px solid black; */
 }
 
 /* Title */
@@ -87,9 +88,9 @@
   font-weight: 600;
   color: blue;
   margin-top: 10px;
+  margin-left: 14px;
 }
 
-/* 📱 Responsive styles */
 @media (max-width: 600px) {
   .heading {
     font-size: 24px;
@@ -113,4 +114,36 @@
     font-size: 14px;
     padding: 8px;
   }
+}
+/* Loader (centered inside ordersWrapper) */
+.loading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px; 
+}
+.ordersWrapper {
+  position: relative;
+  padding: 20px;
+  min-height: 80vh;
+  background-color: #f9f9f9;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  z-index: 5;
+}
+
+.loadingName {
+  margin-top: 10px;
+  font-weight: bold;
+  color: blue;
 }

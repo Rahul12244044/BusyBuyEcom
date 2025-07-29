@@ -94,13 +94,13 @@ var allProducts=[
     ),
     new ProductModel(
         17,
-        "new balance Men's Athletic Stability Tennis Shoe White 7 D(M) US",30988,"https://m.media-amazon.com/images/I/618uqWzG5ZL._SY695_.jpg",1,["shoes","Shoes","new balance Men's Athletic Stability Tennis Shoe White 7 D(M) US","Man's Shoes"],"Man's Shoes"
+        "new balance Men's Athletic Stability Tennis Shoe",30988,"https://m.media-amazon.com/images/I/618uqWzG5ZL._SY695_.jpg",1,["shoes","Shoes","new balance Men's Athletic Stability Tennis Shoe White 7 D(M) US","Man's Shoes"],"Man's Shoes"
     ),
     new ProductModel(
-        18,"HEALTH FIT Super Comfortable & Breathable Soft Sole Ultra-Lightweight Shoes",1799,"https://m.media-amazon.com/images/I/51H1BJClcWL._SY695_.jpg",1,["shoes","Shoes","HEALTH FIT Super Comfortable & Breathable Soft Sole Ultra-Lightweight Shoes","Man's Shoes"],"Man's Shoes"
+        18,"HEALTH FIT Super Comfortable & Breathable Soft Shoes",1799,"https://m.media-amazon.com/images/I/51H1BJClcWL._SY695_.jpg",1,["shoes","Shoes","HEALTH FIT Super Comfortable & Breathable Soft Sole Ultra-Lightweight Shoes","Man's Shoes"],"Man's Shoes"
     ),
     new ProductModel(
-        19,"Topo Athletic Men's MTN Racer 3 Comfortable Lightweight Shoes",49999,"https://m.media-amazon.com/images/I/713ezWdeDcL._SX695_.jpg",1,["shoes","Shoes","Topo Athletic Men's MTN Racer 3 Comfortable Lightweight Shoes","Men's Shoes"],"Men's Shoes"
+        19,"Topo Athletic Men's MTN Racer 3 Lightweight Shoes",49999,"https://m.media-amazon.com/images/I/713ezWdeDcL._SX695_.jpg",1,["shoes","Shoes","Topo Athletic Men's MTN Racer 3 Comfortable Lightweight Shoes","Men's Shoes"],"Men's Shoes"
     ),
     new ProductModel(
         20,"Apple Watch Series 10 [GPS 42 mm]",24349,"https://m.media-amazon.com/images/I/61I431q8rhL._SX679_.jpg",1,["electronics","Electronics","Apple Watch Series 10 [GPS 42 mm]"],"Electronics"
@@ -109,13 +109,13 @@ var allProducts=[
         21,"Apple iPad Pro 11″ (M4): Ultra Retina XDR Display",128049,"https://m.media-amazon.com/images/I/61732VrXNnL._SX679_.jpg",1,["electronics","Electronics","Apple iPad Pro 11″ (M4): Ultra Retina XDR Display"],"Electronics"
     ),
     new ProductModel(
-        22,"Aiwa 108 cm (43 inches) Google TV | Full HD ",22299,"https://m.media-amazon.com/images/I/81usGDREkgL._SX679_.jpg",1,["electronics","Electronics","Aiwa 108 cm (43 inches) Google TV | Full HD"],"Electronics"
+        22,"Aiwa 108 cm (43 inches) Google TV ",22299,"https://m.media-amazon.com/images/I/81usGDREkgL._SX679_.jpg",1,["electronics","Electronics","Aiwa 108 cm (43 inches) Google TV | Full HD"],"Electronics"
     ),
     new ProductModel(
         23,"Smart Google TV L43M8-5XIN (Black)",30999,"https://m.media-amazon.com/images/I/81DThWoxTuL._SX679_.jpg",1,["electronics","Electronics","Smart Google TV L43M8-5XIN (Black)"],"Electronics"
     ),
     new ProductModel(
-        24,"Leriya Fashion Western Dress || Rayon Solid Button",483,"https://m.media-amazon.com/images/I/51Q6gdK8LuL._SX679_.jpg",1,["Clothing","cloth","clothing","Cloth","Leriya Fashion Western Dress || Rayon Solid Button","Womens's Clothing"],"Womens's Clothing"
+        24,"Leriya Fashion Western Dress",483,"https://m.media-amazon.com/images/I/51Q6gdK8LuL._SX679_.jpg",1,["Clothing","cloth","clothing","Cloth","Leriya Fashion Western Dress || Rayon Solid Button","Womens's Clothing"],"Womens's Clothing"
     ),
     new ProductModel(
         25,"Flared sports trousers with SoftMove",2699,"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fdb%2Fee%2Fdbee17b0e83e441069fa2f2f55c9781b2a2ddb66.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_sport_bottoms_trousers%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",1,["Clothing","cloth","clothing","Cloth","Flared sports trousers with SoftMove","Womens's Clothing"],"Women's Clothing"
@@ -124,13 +124,13 @@ var allProducts=[
         26,"Oversized motif-detail T-shirt",1299,"https://image.hm.com/assets/hm/9d/e3/9de3a6bc7956d853d073a77b1bd802139e5fc6eb.jpg?imwidth=1260",1,["Clothing","cloth","clothing","Cloth","Oversized motif-detail T-shirt","Womens's Clothing"],"Women's Clothing"
     ),
     new ProductModel(
-        27,"Puma Womens Softride Mayve WN's Res Running Shoe",5499,"https://m.media-amazon.com/images/I/513Jcw9cFCL._SY695_.jpg",1,["shoes","Shoes","Puma Womens Softride Mayve WN's Res Running Shoe","Womens's Shoes"],"Women's Shoes"
+        27,"Puma Womens Softride Mayve WN's Res Shoe",5499,"https://m.media-amazon.com/images/I/513Jcw9cFCL._SY695_.jpg",1,["shoes","Shoes","Puma Womens Softride Mayve WN's Res Running Shoe","Womens's Shoes"],"Women's Shoes"
     ),
     new ProductModel(
         28,"Campus OGL-13 Women's Lace-Up Sneakers",1398,"https://m.media-amazon.com/images/I/61ciOUORC9L._SY695_.jpg",1,["shoes","Shoes","Campus OGL-13 Women's Lace-Up Sneakers","Womens's Shoes"],"Women's Shoes"
     ),
     new ProductModel(
-        29,"ZAVERI PEARLS Pink Green Beads Dazzling Stones",19000,"https://m.media-amazon.com/images/I/71N2z0cVfWL._SY695_.jpg",1,["jewelery","Jewelery","ZAVERI PEARLS Pink Green Beads Dazzling Stones"],"Jewelery"
+        29,"ZAVERI PEARLS Pink Green Beads Stones",19000,"https://m.media-amazon.com/images/I/71N2z0cVfWL._SY695_.jpg",1,["jewelery","Jewelery","ZAVERI PEARLS Pink Green Beads Dazzling Stones"],"Jewelery"
     ),
     new ProductModel(
         30,"18K Gold Plated Traditional Stylish Golden Necklace ",84499,"https://m.media-amazon.com/images/I/71jzKmmzLrL._SY695_.jpg",1,["jewelery","Jewelery","18K Gold Plated Traditional Stylish Golden Necklace "],"Jewelery"
@@ -145,8 +145,7 @@ var allProducts=[
         33,"Sports zip-through hoodie",2699,"https://image.hm.com/assets/hm/1e/38/1e388985d11a4da77dfef908b29a7afc4f8fa6bb.jpg?imwidth=1536",1,["Clothing","cloth","Cloth","clothing","Sports zip-through hoodie","Womens's Clothing"],"Women's Clothing"
         ),
     new ProductModel(
-        34,
-        "Canvas crossbody bag",1999,"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F01%2F88%2F01887a7dbc9d43560837824d937d90bfecec56a3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",1,["bags","Bags","Canvas crossbody bag",],"Bags"
+        34,"Canvas crossbody bag",1999,"https://m.media-amazon.com/images/I/71Sj5ko3UYL._AC_SX679_.jpg",1,["bags","Bags","Canvas crossbody bag",],"Bags"
         ),
     new ProductModel(
         35,"KENNETH COLE stylish & trendy Women's Bag",1770,"https://m.media-amazon.com/images/I/613rmd2lCXL._SY695_.jpg",1,["bags","Bags","KENNETH COLE stylish & trendy Women's Bag"],"Bags"
@@ -170,7 +169,7 @@ var allProducts=[
         41,"Regular Fit Oxford shirt",1499,"https://image.hm.com/assets/hm/68/57/68574ee51428689db0936e61f16faf3535b96422.jpg?imwidth=1260",1,["Clothing","cloth","clothing","Cloth","Regular Fit Oxford shirt"],"Men's Clothing"
         ),
     new ProductModel(
-        42,"10-pack socks",1499,"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe3%2F35%2Fe3355a0d5c2342eb219bdad3188d37537ced7969.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",1,["Clothing","cloth","clothing","Cloth","10-pack socks"],"Men's Clothing"
+        42,"10-pack socks",1499,"https://m.media-amazon.com/images/I/71o7Jfjl5aL._AC_SX679_.jpg",1,["Clothing","cloth","clothing","Cloth","10-pack socks"],"Men's Clothing"
     ),
     new ProductModel(
         43,"Regular Fit Windbreaker",2999,"https://image.hm.com/assets/hm/52/24/5224f6c66d35cd2abc65fed44e11c2a65189a3b3.jpg?imwidth=1260",1,["Clothing","cloth","clothing","Cloth","Regular Fit Windbreaker"],"Men's Clothing"
@@ -179,17 +178,16 @@ var allProducts=[
         44,"Lymio Men Polyester Jackets || Bomber Jacket For Men",899,"https://m.media-amazon.com/images/I/617PqifhwSL._AC_UL640_FMwebp_QL65_.jpg",1,["Clothing","cloth","clothing","Cloth","Lymio Men Polyester Jackets || Bomber Jacket For Men"],"Men's Clothing"
     ),
     new ProductModel(
-        45,"TOPLOT jacket for men || winter jackets for men",1599,"https://m.media-amazon.com/images/I/61EtFyskGfL._SY879_.jpg",1,["Clothing","cloth","clothing","Cloth","TOPLOT jacket for men || winter jackets for men"],"Men's Clothing"
+        45,"TOPLOT jacket for men",1599,"https://m.media-amazon.com/images/I/61EtFyskGfL._SY879_.jpg",1,["Clothing","cloth","clothing","Cloth","TOPLOT jacket for men || winter jackets for men"],"Men's Clothing"
     ),
     new ProductModel(
         46,"BLACKSTEP Women's Fleece Sherpa Hoodie",699,"https://m.media-amazon.com/images/I/41KeNECL1aL.jpg",1,["Clothing","cloth","clothing","Cloth","BLACKSTEP Women's Fleece Sherpa Hoodie"],"Men's Clothing"
     ),
     new ProductModel(
-        47,"CK INNERWEAR Presents Plain Strechable Underwear for Men (Multicolour)",494,"https://m.media-amazon.com/images/I/71By9Jeqo5L._SX679_.jpg",1,
-        ["Clothing","cloth","clothing","Cloth","BLACKSTEP Women's Fleece Sherpa Hoodie"],"Men's Clothing"
+        47,"CK INNERWEAR Presents Strechable Underwear for Men", 494,"https://m.media-amazon.com/images/I/71By9Jeqo5L._SX679_.jpg",1,["Clothing","cloth","clothing","Cloth","BLACKSTEP Women's Fleece Sherpa Hoodie"],"Men's Clothing"
     ),
     new ProductModel(
-        48,"TAGAS Men's Regular Jacket Fit For Casual Wear || Low-Cut Standing Collar || Full Sleeve ",1299,"https://m.media-amazon.com/images/I/61yp3ndG1JL._SY879_.jpg",1,["Clothing","cloth","clothing","Cloth","TAGAS Men's Regular Jacket Fit For Casual Wear || Low-Cut Standing Collar || Full Sleeve "],"Men's Clothing"
+        48,"TAGAS Men's Regular Jacket Fit For Casual Wear",1299,"https://m.media-amazon.com/images/I/61yp3ndG1JL._SY879_.jpg",1,["Clothing","cloth","clothing","Cloth","TAGAS Men's Regular Jacket Fit For Casual Wear || Low-Cut Standing Collar || Full Sleeve "],"Men's Clothing"
     ),
     new ProductModel(
         49,"WEAR TO GO Unisex Adult Cotton ALPHA Varsity jacket",711,"https://m.media-amazon.com/images/I/51nXSH9k28L._SX679_.jpg",1,["Clothing","cloth","clothing","Cloth","WEAR TO GO Unisex Adult Cotton ALPHA Varsity jacket"],"Men's Clothing"
@@ -237,7 +235,7 @@ var allProducts=[
         63,"Plants with Pot|Realistic Looking| Multi Variety",390,"https://m.media-amazon.com/images/I/710jjgj13jL._SX679_.jpg",1,["decoration","Decoration","Plants with Pot|Realistic Looking| Multi Variety","House Decoration"],"House Decoration"
     ),
     new ProductModel(
-        64,"IT2M MDF Wall Hanging For Home Décor For Living Room Bedroom",240,"https://m.media-amazon.com/images/I/71GgUWb+qEL._AC_UL640_FMwebp_QL65_.jpg",1,["decoration","Decoration","IT2M MDF Wall Hanging For Home Décor For Living Room Bedroom","House Decoration"],"House Decoration"
+        64,"IT2M MDF Wall Hanging For Home Décor For Living Room",240,"https://m.media-amazon.com/images/I/71GgUWb+qEL._AC_UL640_FMwebp_QL65_.jpg",1,["decoration","Decoration","IT2M MDF Wall Hanging For Home Décor For Living Room Bedroom","House Decoration"],"House Decoration"
     ),
     new ProductModel(
         65,"Home Decor Showpiece Donut Vase 6 & 8 Inches",799,"https://m.media-amazon.com/images/I/713xOgFeEhL._SX679_.jpg",1,["decoration","Decoration","Home Decor  Showpiece Donut Vase 6 & 8 Inches","House Decoration"],"House Decoration"
@@ -267,13 +265,13 @@ var allProducts=[
         73,"Groeien newPT-X3VH-0ZIP 40-Watts Antique Hanging Lamp",825,"https://m.media-amazon.com/images/I/31L7Jr21+SL._SX342_SY445_.jpg",1,["decoration","Decoration","Groeien newPT-X3VH-0ZIP 40-Watts Antique Hanging Lamp"],"House Decoration"
     ),
     new ProductModel(
-        74,"Groeien 3 Lights Cluster Chandelier Diamond Hanging Pendant Light",788,"https://m.media-amazon.com/images/I/61HTlYUxKWL._SX679_.jpg",1,["decoration","Decoration","Groeien 3 Lights Cluster Chandelier Diamond Hanging Pendant Light"],"House Decoration"
+        74,"Groeien 3 Lights Cluster Chandelier Diamond Light",788,"https://m.media-amazon.com/images/I/61HTlYUxKWL._SX679_.jpg",1,["decoration","Decoration","Groeien 3 Lights Cluster Chandelier Diamond Hanging Pendant Light"],"House Decoration"
     ),
     new ProductModel(
         75,"BENHEK® Retro Style Hena Wall Lamp with Bulb",999,"https://m.media-amazon.com/images/I/31CXdeCEgwL._SY445_SX342_QL70_FMwebp_.jpg",1,["decoration","Decoration","BENHEK® Retro Style Hena Wall Lamp with Bulb"],"House Decoration"
     ),
     new ProductModel(
-        76,"Harold Electricals Crown Prince Wall Light | Golden Wall Lamp",3999,"https://m.media-amazon.com/images/I/61fo5MtyibL._SX679_.jpg",1,["decoration","Harold Electricals Crown Prince Wall Light | Golden Wall Lamp"],"House Decoration"
+        76,"Harold Electricals Crown Prince Wall Light",3999,"https://m.media-amazon.com/images/I/61fo5MtyibL._SX679_.jpg",1,["decoration","Harold Electricals Crown Prince Wall Light | Golden Wall Lamp"],"House Decoration"
     ),
     new ProductModel(
         77,"CELLO Checkers Pet Plastic Airtight Canister Set",579,"https://m.media-amazon.com/images/I/51nbqUW7ClL._AC._SR180,230.jpg",1,["kitchen","Kitechen","CELLO Checkers Pet Plastic Airtight Canister Set"],"Kitchen"

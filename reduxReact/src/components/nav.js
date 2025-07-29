@@ -3,7 +3,7 @@ import { Outlet, NavLink, useLocation,useNavigate } from "react-router-dom";
 import navbarCssModule from "../cssModule/navBar.module.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchProductByName } from "../redux/reducers/itemsReducer.js";
+import { searchProductByName,getInitialStateAsync } from "../redux/reducers/itemsReducer.js";
 import { useItem } from "../context/itemContext.js";
 import { logoutAsyncUser } from "../redux/reducers/userReducer.js";
 import { cartSelector } from "../redux/reducers/cartReducer.js";
@@ -31,11 +31,16 @@ const NavBar = () => {
     const cartState = useSelector(cartSelector);
 
     useEffect(() => {
+    if (searchProduct.trim() !== "") {
         dispatch(searchProductByName(searchProduct));
-    }, [searchProduct, dispatch]);
+    } else {
+        dispatch(getInitialStateAsync()); 
+    }
+}, [searchProduct, dispatch]);
+
 
     const logOutUser = () => {
-  dispatch(logoutAsyncUser({ payload: userId })); // 👈 First, call backend
+  dispatch(logoutAsyncUser({ payload: userId }));
 
   sessionStorage.removeItem("user");
   localStorage.removeItem("user");
@@ -96,7 +101,13 @@ const NavBar = () => {
                 <div className={navbarCssModule.search}>
                     <form className={navbarCssModule.searchByName}>
                         <input
-                            onChange={(event) => setSearchProduct(event.target.value)}
+                            onChange={(event) => {
+                            const value = event.target.value;
+                            setSearchProduct(value);
+                            if (value.trim() === "") {
+                            dispatch(getInitialStateAsync());
+                            }
+                            }}
                             className={navbarCssModule.searchItems}
                             placeholder="Search By Name"
                             value={searchProduct}

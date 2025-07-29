@@ -1,13 +1,15 @@
-.navbar{
-    height:90px;
-    width:100%;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    display:flex;
-    align-items:center;
-    gap:5%;
-    box-shadow:rgba(17, 17, 26, 0.05) 0px 15px 20px;
+.navbar {
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 15px 20px;
+  background: linear-gradient(to right, #f7f8fc, #e6ecff); /* soft professional gradient */
+  border-bottom: 1px solid #dfe3ee;
 }
+
 .buyBusy{
     height:60%;
     width:10%;
@@ -34,6 +36,20 @@
     align-items:center;
     position:relative;
 }
+.homeSign {
+  color: #4a4ae5;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Quicksand, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.homeSign:hover {
+  color: #224957;
+}
+
 .image{
     height:80%;
     width:30%;
@@ -290,4 +306,42 @@
     width: 100%;
     justify-content: center;
   }
+}
+.search {
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  /* background: #f0f2f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.searchByName {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.searchItems {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.searchItems:focus {
+  outline: none;
+  border-color: #7064e5;
+  box-shadow: 0 0 0 3px rgba(112, 100, 229, 0.2);
 }

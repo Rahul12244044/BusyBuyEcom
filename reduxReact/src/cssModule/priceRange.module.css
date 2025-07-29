@@ -1,43 +1,17 @@
-.priceFilter{
-    min-height:480px;
-    width:250px;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background-color:#f0f0fc;
-    border-radius:10px;
-}
-.priceForm{
-    height:80%;
-    width:80%;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-}
-.price{
-    font-size:22px;
-}
-.filterItems{
-    height:120px;
-    width:190px;
-    /* border:2px solid black; */
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-    font-size:17px;
-}
-.takePrice{
-    transform:scale(1.4);
-    background-color:#7064e5;
-    height:6px;
-}
-.filterAndCategory{
-    color:#224957;
+.priceFilter {
+    min-height: 480px;
+    width: 250px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #ffffff, #f0f0fc); /* soft gradient */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* subtle modern shadow */
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
 }
 
+.priceFilter:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

@@ -64,31 +64,28 @@
     border-radius:6px;
     border:none;
     transition:all 0.3s ease-in-out;
+    cursor:pointer;
 }
 .addButton:hover{
     color:#7064e5;
     background-color:#fff;
     border:1px solid #7064e5;
 }
-.loading {
-  height: 135px;
-  width: 222px;
-  box-sizing: border-box;
+.loadingContainer {
+  position: relative;
+  width: 100%;
+  min-height: 300px; /* adjust as needed */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
+
 
 .loadingName{
     font-size:20px;
-    margin-left:10px;
-    font-weight:600;
-    color:blue;
+    margin-left:-14px;
+    font-weight: bold;
+    color: blue;
 }
 .backImage{
     height:20px;
@@ -201,6 +198,7 @@
   .addButton {
     width: 90%;
     font-size: 16px;
+    cursor:pointer;
   }
 
   .likeToggle {

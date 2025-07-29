@@ -12,6 +12,8 @@ import {
   orderPlaceAsync,
 } from "../redux/reducers/orderReducer.js";
 import { useItem } from "../context/itemContext.js";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const TotalPrice = () => {
   const { userId, totalPrice, setOrderPlaced, setTotalPrice } = useItem();
@@ -33,6 +35,11 @@ const TotalPrice = () => {
       await dispatch(
         orderPlaceAsync({ userId, totalPrice, orderItems: allCartItems })
       );
+      toast.success("Order placed successfully!", {
+      position: "top-center",
+      autoClose: 4000,
+    });
+
 
       // Update state
       setOrderPlaced(true);
@@ -43,7 +50,10 @@ const TotalPrice = () => {
       dispatch(cartActions.setCartToEmpty([]));
 
       // Navigate to orders page
-      navigate("/myOrders");
+
+
+      // Delay navigation until after toast
+      window.location.href = '/myOrders';
     } catch (error) {
       console.error("Order placement failed:", error);
     } finally {
@@ -66,6 +76,7 @@ const TotalPrice = () => {
           {isPlacingOrder ? "Placing Order..." : "Purchase"}
         </button>
       </div>
+       <ToastContainer />
     </>
   );
 };

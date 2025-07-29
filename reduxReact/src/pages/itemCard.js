@@ -42,7 +42,7 @@ const ItemCard = () => {
       setFiltering(true);
       const delay = setTimeout(() => {
         setFiltering(false);
-      }, 500);
+      }, 2000);
       return () => clearTimeout(delay);
     }
   }, [productState.allProducts, loading]);
@@ -76,13 +76,16 @@ const ItemCard = () => {
 
   // Render loading spinner
   if (loading || filtering) {
-    return (
+  return (
+    <div className={itemCssModule.loadingContainer}>
       <div className={itemCssModule.loading}>
         <ClipLoader size={40} color="blue" />
         <p className={itemCssModule.loadingName}>Loading...</p>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   // Render empty product state
   if (productState.allProducts.length === 0) {
